@@ -7,7 +7,7 @@
 
 NeuroLab, A real-time EEG monitoring platform designed to capture, analyze, and visualize brainwave activity for research, educational, and experimental purposes. The system enables continuous acquisition of neural signals from EEG sensors and processes the data to extract meaningful brainwave patterns such as delta, theta, alpha, beta, and gamma bands. These signals are analyzed to estimate cognitive states, stress levels, and overall signal quality during a monitoring session. NeuroLab provides an interactive environment where users can register participants, initiate recording sessions, observe live brainwave activity, and review session summaries after completion.
 
-## Features
+### Features
 
 - Real-time EEG streaming via WebSocket
 - Arduino-based EEG acquisition (BioAmp EXG Pill)
@@ -18,7 +18,7 @@ NeuroLab, A real-time EEG monitoring platform designed to capture, analyze, and 
 - AI-generated session summaries (Gemini API)
 - Interactive EEG dashboard
 
-## Hardware
+### Hardware
 
 NeuroLab uses an Arduino-based IoT system to acquire real-time EEG signals from the brain via BioAmp EXG Pill sensor. The system features:
 
@@ -32,7 +32,7 @@ For detailed hardware specifications, pin configurations, wiring diagrams, and c
 
 ---
 
-## Frontend
+### Frontend
 
 NeuroLab Frontend is  Next.js web application with real-time EEG visualization, patient management, and interactive dashboards.
 
@@ -59,6 +59,6 @@ For detailed frontend architecture, component catalog, setup instructions, and A
 ---
 
 
-## Security Note
+### Security Note
 
 NeuroLab currently stores EEG data locally for research and development purposes.
