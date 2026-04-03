@@ -18,6 +18,20 @@ NeuroLab, A real-time EEG monitoring platform designed to capture, analyze, and 
 - AI-generated session summaries (Gemini API)
 - Interactive EEG dashboard
 
+## Hardware
+
+NeuroLab uses an Arduino-based IoT system to acquire real-time EEG signals from the brain via BioAmp EXG Pill sensor. The system features:
+
+- **Microcontroller**: Arduino Uno/Mega (ATmega328P/2560)
+- **EEG Sensor**: BioAmp EXG Pill with 256 Hz sampling rate
+- **Real-time Display**: 8x2 I2C LCD for local feedback
+- **Audio Feedback**: DF Player Mini for session alerts
+- **Serial Communication**: 115200 baud to backend
+
+For detailed hardware specifications, pin configurations, wiring diagrams, and component details, see [Hardware Documentation](Hardware/README.md).
+
+---
+
 ## Contributing
 
 Pull requests are welcome.

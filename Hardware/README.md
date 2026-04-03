@@ -4,18 +4,15 @@
 The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system that captures neural signals and transmits real-time data to the backend via serial communication at 115200 baud.
 
 ---
-
-## Components Used
-
-#### Core Components
+## Hardware Components
 
 | Component | Model | Purpose | Specification |
 |-----------|-------|---------|-----------------|
-| **Microcontroller** | Arduino Uno/Nano | Main processing unit | ATmega328P / ATmega168 |
-| **EEG Sensor** | BioAmp EXG Pill | Neural signal acquisition | Analog input on pin A0 |
+| **Microcontroller** | Arduino Uno/Mega | Main processing unit | ATmega328P / ATmega2560 |
+| **EEG Sensor** | BioAmp EXG Pill | Neural signal acquisition | 256Hz sampling, 0-5V analog |
 | **LCD Display** | 8x2 I2C LCD | Real-time data display | Address: 0x27, I2C interface |
-| **Audio Module** | DFRobot DF Player Mini | Session audio feedback | Serial/SoftwareSerial interface |
-| **Serial Interface** | USB/Serial | Communication with backend | 115200 baud rate |
+| **Audio Module** | DFRobot DF Player Mini | Session audio feedback | MP3/WAV playback, 2W speaker |
+| **Serial Interface** | USB Type-B | Backend communication | 115200 baud rate |
 
 #### Pin Configuration
 
