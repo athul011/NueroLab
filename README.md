@@ -44,16 +44,6 @@ NeuroLab Frontend is  Next.js web application with real-time EEG visualization, 
 - **Forms**: React Hook Form + Zod validation
 - **Real-time**: WebSocket integration for live EEG streaming
 
-**Key Features:**
-- ✅ Real-time EEG waveform visualization (256Hz sampling)
-- ✅ Frequency band analysis (Delta, Theta, Alpha, Beta, Gamma)
-- ✅ Mental state detection (Relaxed/Focused/Stressed)
-- ✅ Stress & relaxation gauges
-- ✅ Signal quality scoring
-- ✅ Patient registration & management
-- ✅ Session history & AI-generated summaries
-- ✅ Responsive design with dark mode support
-
 For detailed frontend architecture, component catalog, setup instructions, and API integration, see [Frontend Documentation](Frontend/README.md).
 
 ---
