@@ -36,7 +36,6 @@ For detailed hardware specifications, pin configurations, wiring diagrams, and c
 
 NeuroLab Frontend is  Next.js web application with real-time EEG visualization, patient management, and interactive dashboards.
 
-**Tech Stack:**
 - **Framework**: Next.js, TypeScript 5.7
 - **UI Components**: Radix UI (30+ components)
 - **Styling**: Tailwind CSS 4
@@ -48,6 +47,21 @@ For detailed frontend architecture, component catalog, setup instructions, and A
 
 ---
 
+### Backend
+
+NeuroLab Backend is FastAPI server that handles real-time EEG signal processing, patient management, and AI-powered session analysis. Built with modern async/await patterns, it streams live neural data via WebSocket while performing complex signal analysis.
+
+- **Framework**: FastAPI 0.115, Uvicorn async server
+- **Signal Processing**: NumPy, SciPy (filtering, FFT, spectral analysis)
+- **Hardware I/O**: PySerial 3.5 (Arduino communication at 115200 baud)
+- **Data Validation**: Pydantic 2.8 for type-safe models
+- **Real-time Communication**: WebSockets 12.0
+- **AI Integration**: aiohttp + Google Gemini API
+
+
+For comprehensive backend documentation including API endpoints, signal processing details, WebSocket data formats, setup instructions see [Backend Documentation](Backend/README.md).
+
+---
 
 ### Security Note
 
