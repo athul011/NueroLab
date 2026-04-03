@@ -62,7 +62,21 @@ NeuroLab Backend is FastAPI server that handles real-time EEG signal processing,
 For comprehensive backend documentation including API endpoints, signal processing details, WebSocket data formats, setup instructions see [Backend Documentation](Backend/README.md).
 
 ---
+### Collaborators
+<table>
+    <tbody>
+        <tr>
+            <td valign="top" ><a href="https://github.com/riz4d"><img src="https://avatars.githubusercontent.com/u/73955457?v=4?s=100" width="100px;" alt="Mohamed Rizad"/><br /><sub><b>Mohamed Rizad</b></sub></a></td>
+        </tr>
+    </tbody>
+</table>
 
+---
 ### Security Note
 
 NeuroLab currently stores EEG data locally for research and development purposes.
+
+---
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
