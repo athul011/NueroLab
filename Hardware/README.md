@@ -7,7 +7,7 @@ The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system 
 
 ## Components Used
 
-### Core Components
+#### Core Components
 
 | Component | Model | Purpose | Specification |
 |-----------|-------|---------|-----------------|
@@ -17,14 +17,14 @@ The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system 
 | **Audio Module** | DFRobot DF Player Mini | Session audio feedback | Serial/SoftwareSerial interface |
 | **Serial Interface** | USB/Serial | Communication with backend | 115200 baud rate |
 
-### Pin Configuration
+#### Pin Configuration
 
 - **EEG Input**: A0 (Analog)
 - **I2C Clock (SCL)**: A5 (SDA) / A4 (SCL)
 - **DF Player Mini RX**: Pin 11
 - **DF Player Mini TX**: Pin 10
 
-### Signal Processing
+#### Signal Processing
 
 - **Sampling Rate**: 256 Hz
 - **Sample Interval**: ~3906 microseconds (1,000,000 µs / 256 Hz)
@@ -35,7 +35,7 @@ The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system 
 ## PCB & Board Pin Diagrams
 
 
-### Component Wiring Diagram
+#### Component Wiring Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -63,12 +63,12 @@ The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system 
 
 ## Libraries Used
 
-### 1. **Wire.h**  (Built-in)
+#### 1. **Wire.h**  (Built-in)
 - **Purpose**: I2C communication protocol
 - **Used For**: LCD display communication
 - **Credits**: Arduino Core Library
 
-### 2. **LiquidCrystal_I2C v1.1.3** 
+#### 2. **LiquidCrystal_I2C v1.1.3** 
 - **Purpose**: Control 16x2/8x2 I2C LCD displays
 - **Used For**: Real-time EEG value and sampling rate display
 - **Author**: Frank de Brabander
@@ -76,12 +76,12 @@ The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system 
 - **GitHub**: https://github.com/johnrickman/LiquidCrystal_I2C
 - **Installation**: Arduino Library Manager or Manual
 
-### 3. **SoftwareSerial.h**  (Built-in)
+#### 3. **SoftwareSerial.h**  (Built-in)
 - **Purpose**: Software-based serial communication
 - **Used For**: Communication with DF Player Mini module
 - **Credits**: Arduino Core Library
 
-### 4. **DFRobotDFPlayerMini v1.0.5** 
+#### 4. **DFRobotDFPlayerMini v1.0.5** 
 - **Purpose**: Control DFRobot DF Player Mini audio module
 - **Used For**: Audio feedback during sessions (startup sound, session alerts)
 - **Author**: DFRobot
@@ -97,7 +97,7 @@ The NeuroLab hardware layer consists of an Arduino-based EEG acquisition system 
 
 ## Data Flow
 
-### Hardware Layer Data Flow Diagram
+#### Hardware Layer Data Flow Diagram
 
 ```
 EEG Sensor (A0)
@@ -113,7 +113,7 @@ EEG Filter Applied (DSP)
 └─→ Optional Audio Feedback
 ```
 
-### Detailed Diagrams
+#### Detailed Diagrams
 For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 - 📋 **Schematics**: `schematics/hardware/`
 - 📊 **Flowcharts**: `schematics/hardware/flowchart/`
@@ -122,7 +122,7 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 
 ## Complete Hardware Wiring Diagram
 
-### Full System Connection Diagram with Specifications
+#### Full System Connection Diagram with Specifications
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -160,9 +160,9 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Pin Mapping Reference Table
+#### Pin Mapping Reference Table
 
-#### Arduino Uno Pin Configuration
+##### Arduino Uno Pin Configuration
 | Pin | Function | Connection | Signal Type | Spec |
 |-----|----------|-----------|-------------|------|
 | A0 | ADC Input | EEG Sensor | Analog 0-5V | 10-bit, 256Hz sampling |
@@ -175,7 +175,7 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 | +5V | Power | EEG, LCD, Arduino | DC Power | 40mA per pin |
 | GND | Ground | All Components | Reference | Common return |
 
-#### Arduino Mega 2560 Pin Configuration
+##### Arduino Mega 2560 Pin Configuration
 | Pin | Function | Connection | Signal Type | Spec |
 |-----|----------|-----------|-------------|------|
 | A0 | ADC Input | EEG Sensor | Analog 0-5V | 10-bit, 256Hz sampling |
@@ -188,7 +188,7 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 | +5V | Power | EEG, LCD, Arduino | DC Power | 40mA per pin |
 | GND | Ground | All Components | Reference | Common return |
 
-### Component Signal Specifications
+#### Component Signal Specifications
 
 **EEG Sensor (BioAmp EXG Pill)**
 - Input: Bioelectric signals from electrodes
@@ -220,7 +220,7 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 
 ## Serial Communication Protocol
 
-### Output Format
+#### Output Format
 ```
 <filtered_eeg_value>\n
 ```
@@ -233,20 +233,20 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 
 ## Arduino Setup Instructions
 
-### 1. Install Required Libraries
+#### 1. Install Required Libraries
 ```bash
 # Via Arduino IDE Library Manager:
 - Search "LiquidCrystal I2C" → Install by Frank de Brabander
 - Search "DFRobotDFPlayerMini" → Install by DFRobot
 ```
 
-### 2. Upload Code
+#### 2. Upload Code
 - Connect Arduino via USB
 - Select Board: Arduino Uno/Nano
 - Select Port: /dev/ttyUSB* (Linux) or COM* (Windows)
 - Upload `main.ino`
 
-### 3. Hardware Connections
+#### 3. Hardware Connections
 - Connect BioAmp EXG Pill output to A0
 - Connect LCD I2C to SDA/SCL
 - Connect DF Player Mini RX/TX to pins 11/10
@@ -269,17 +269,17 @@ For complete circuit schematics, PCB layouts, and detailed flowcharts, see:
 
 ## Troubleshooting
 
-### Display Issues
+#### Display Issues
 - Verify I2C address is 0x27 (check with I2C scanner)
 - Ensure LCD power and connections are secure
 - Try adjusting contrast potentiometer
 
-### Serial Communication Issues
+#### Serial Communication Issues
 - Verify baud rate matches backend (115200)
 - Check USB cable quality
 - Ensure Arduino drivers are installed
 
-### Audio Module Issues
+#### Audio Module Issues
 - Verify microSD card is inserted and formatted
 - Check DFPlayer power supply (3.3V typically)
 - Ensure audio files are in correct format (MP3)
