@@ -32,10 +32,32 @@ For detailed hardware specifications, pin configurations, wiring diagrams, and c
 
 ---
 
-## Contributing
+## Frontend
 
-Pull requests are welcome.
-If you would like to contribute
+NeuroLab Frontend is  Next.js web application with real-time EEG visualization, patient management, and interactive dashboards.
+
+**Tech Stack:**
+- **Framework**: Next.js, TypeScript 5.7
+- **UI Components**: Radix UI (30+ components)
+- **Styling**: Tailwind CSS 4
+- **Visualization**: Recharts (EEG waveforms, frequency spectra)
+- **Forms**: React Hook Form + Zod validation
+- **Real-time**: WebSocket integration for live EEG streaming
+
+**Key Features:**
+- ✅ Real-time EEG waveform visualization (256Hz sampling)
+- ✅ Frequency band analysis (Delta, Theta, Alpha, Beta, Gamma)
+- ✅ Mental state detection (Relaxed/Focused/Stressed)
+- ✅ Stress & relaxation gauges
+- ✅ Signal quality scoring
+- ✅ Patient registration & management
+- ✅ Session history & AI-generated summaries
+- ✅ Responsive design with dark mode support
+
+For detailed frontend architecture, component catalog, setup instructions, and API integration, see [Frontend Documentation](Frontend/README.md).
+
+---
+
 
 ## Security Note
 
